@@ -13,7 +13,7 @@ class Produk extends Migration
      */
     public function up()
     {
-        Schema::create('produks', function (Blueprint $table) {
+        Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
             $table->string('harga_satuan');

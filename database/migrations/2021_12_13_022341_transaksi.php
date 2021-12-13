@@ -13,7 +13,7 @@ class Transaksi extends Migration
      */
     public function up()
     {
-        Schema::create('transaksis', function (Blueprint $table) {
+        Schema::create('transactions', function (Blueprint $table) {
             $table->id();
             $table->string('transaksi');
             $table->bigInteger('id_user');

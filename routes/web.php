@@ -20,3 +20,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//admin routes
+Route::get('/login/admin', 'Admin_loginController@adminform')->name('admin');
+Route::post('/login/admin-logined', 'Admin_loginController@adminLogin')->name('login.admin');
+Route::get('/logout', 'Admin_loginController@logout')->name('admin.logout');
+
+Route::get('/admin/dashboard', 'Admin_loginController@admin_dashboard')->name('admin.dashboard');

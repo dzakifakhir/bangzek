@@ -13,7 +13,7 @@ class DetailTransaksi extends Migration
      */
     public function up()
     {
-        Schema::create('detail_transaksis', function (Blueprint $table) {
+        Schema::create('detail_transactions', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('id_transaksi');
             $table->bigInteger('id_produk');

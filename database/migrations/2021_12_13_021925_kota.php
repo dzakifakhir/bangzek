@@ -13,7 +13,7 @@ class Kota extends Migration
      */
     public function up()
     {
-        Schema::create('kotas', function (Blueprint $table) {
+        Schema::create('citys', function (Blueprint $table) {
             $table->id();
             $table->string('nama_kota');
             $table->timestamps();

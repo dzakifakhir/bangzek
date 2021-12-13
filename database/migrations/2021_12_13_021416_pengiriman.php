@@ -13,7 +13,7 @@ class Pengiriman extends Migration
      */
     public function up()
     {
-        Schema::create('pengirimans', function (Blueprint $table) {
+        Schema::create('delivers', function (Blueprint $table) {
             $table->id();
             $table->string('kota_asal');
             $table->string('kota_tujuan');
