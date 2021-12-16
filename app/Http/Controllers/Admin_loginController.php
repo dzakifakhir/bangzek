@@ -46,9 +46,8 @@ class Admin_loginController extends Controller
     $totalusers = User::count('id');
     $transaction = Transactions::count('id');
     $prodct_list = Product::latest()->paginate(5)->appends(request()->except('page'));
-    $notifications = Transactions::latest()->paginate(5)->appends(request()->except('page'));
 
-    return view('admin.dashboard', compact('total', 'totalusers', 'transaction', 'notifications', 'prodct_list'));
+    return view('admin.dashboard', compact('total', 'totalusers', 'transaction', 'prodct_list'));
   }
 
   public function logout(Request $request)

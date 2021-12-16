@@ -32,7 +32,6 @@
           <img src="{{ asset('admin/img/brand/blue.png') }}" class="navbar-brand-img" alt="...">
         </a>
       </div>
-      <p>Sesuaikan nanti</p>
       <div class="navbar-inner">
         <!-- Collapse -->
         <div class="collapse navbar-collapse" id="sidenav-collapse-main">
@@ -45,33 +44,15 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('admin.dashboard') }}">
-                <i class="ni ni-planet text-orange"></i>
-                <span class="nav-link-text">Product</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ route('admin.dashboard') }}">
-                <i class="ni ni-single-02 text-yellow"></i>
-                <span class="nav-link-text">User</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ route('admin.dashboard') }}">
-                <i class="ni ni-send text-dark"></i>
-                <span class="nav-link-text">Feeds</span>
+              <a class="nav-link" href="{{ route('admin.produk') }}">
+                <i class="ni ni-active-40 text-dark"></i>
+                <span class="nav-link-text">Add Product</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ route('admin.dashboard') }}">
                 <i class="ni ni-cart text-dark"></i>
                 <span class="nav-link-text">Transactions</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ route('admin.dashboard') }}">
-                <i class="ni ni-active-40 text-dark"></i>
-                <span class="nav-link-text">Order Status</span>
               </a>
             </li>
           </ul>

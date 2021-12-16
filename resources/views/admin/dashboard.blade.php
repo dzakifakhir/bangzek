@@ -71,7 +71,7 @@
     <!-- Page content -->
     <div class="container-fluid mt--6">
       <div class="row">
-        <div class="col-xl-8">
+        <div class="col-xl-12">
           <div class="card">
             <div class="table-responsive">
               <!-- Projects table -->
@@ -79,8 +79,8 @@
                 <thead class="thead-light">
                   <tr>
                     <th scope="col">Name</th>
-                    <th scope="col">Title</th>
-                    <th scope="col">Content</th>
+                    <th scope="col">harga</th>
+                    <th scope="col">stock</th>
                     <th scope="col">Date</th>
                   </tr>
                 </thead>
@@ -89,13 +89,13 @@
                   @forelse($prodct_list as $row)
                   <tr>
                     <th scope="row">
-                      {{ Str::limit($row->nama, 15) }}
+                      {{ Str::limit($row->nama) }}
                     </th>
                     <td>
                       {{ $row->harga_satuan }}
                     </td>
                     <td>
-                      {{ Str::limit($row->stock, 15) }}
+                      {{ $row->stock }}
                     </td>
                     <td>
                       {{ $row->created_at }}
@@ -111,30 +111,6 @@
               <div style="display:flex;justify-content:center;margin-top:25px;">
                   {{ $prodct_list->links() }}
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-4">
-          <div class="card">
-            <div class="card-header bg-transparent">
-              <div class="row align-items-center">
-                <p class="text-sm text-muted m-0"><strong>Notifications</strong></p>
-              </div>
-            </div>
-            <div class="card-body">
-              <!-- Chart -->
-              @forelse($notifications as $row)
-              <ol>
-                <li>{{ $row->name_product }}
-                    {{ $row->amount }}
-                </li>
-              </ol>
-              @empty
-              <tr>
-                <td colspan="4" class="text-center">Empty</td>
-              </tr>
-              @endforelse
-              <hr>
             </div>
           </div>
         </div>
